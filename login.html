@@ -1,0 +1,53 @@
+<!--
+/*
+ * @Author: Blacks Wang
+ * @Date: 2019-11-14 14:46:27 
+ * @Last Modified by: Blacks Wang
+ * @Last Modified time: 2019-11-28 14:12:54
+ */
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css"  href="./css/main.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="index.html" class="login-form">
+        <h1>
+            Login
+        </h1>
+
+        <div class="textb">
+            <input type="text"  maxlength="10">
+            <span data-placeholder="Username"></span>
+        </div>
+        <div class="textb">
+            <input type="password"  maxlength="10">
+            <span data-placeholder="Password"></span>
+        </div>
+        <input type="submit" class="logbtn" value="Login">
+        <div class="bottom-text">
+            Don't have account?<a href="#">Sign up</a>
+        </div>
+    </form>
+    <script type="text/javascript">
+        $('.textb input').on("focus",function(){
+            $(this).addClass("focus");
+        });
+
+        $(".textb input").on("bulr",function(){
+            if($(this).val()=="")
+             $(this).removeClass("focus");
+        });
+    </script>
+</body>
+
+</html>
